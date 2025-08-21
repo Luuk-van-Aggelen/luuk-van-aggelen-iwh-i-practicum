@@ -21,7 +21,6 @@ app.get('/', async (req, res) => {
 	try {
 		const response = await axios.get(pets, { headers });
 		const data = response.data.results;
-		// res.json(data) // raw data;
 		res.render('homepage', { title: 'Pets | HubSpot APIs', data }); 
 	} catch (error) {
 		console.error(error);
@@ -49,7 +48,6 @@ app.get('/update-cobj', async (req, res) => {
 })
 
 app.post('/update-cobj', async (req, res) => {
-	// console.log(req);
 	const update = {
 		properties: {
 			"name": req.body.name,

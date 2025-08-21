@@ -1,1 +1,1 @@
-https://app.hubspot.com/contacts/146761057/objects/2-146203150/views/all/list
+https://app-eu1.hubspot.com/contacts/146761074/objects/2-146203150/views/all/list
