@@ -1,0 +1,30 @@
+doctype html
+html(lang="en")
+	head
+		title= `${title}`
+		meta(name="viewport" content="width=device-width, initial-scale=1")
+		link(rel="stylesheet", href="/css/style.css")
+	body
+		.container
+			h1 Pets
+			p Below is a list of pets from the Scherp Online office with their date of birth, so HR can send some lovely treats on their birthday.
+			table
+				thead
+					tr
+						th Name
+						th Type of pet
+						th Date of birth
+						th Update
+				tbody
+					each pet in data
+						tr
+							td #{pet.properties.name}
+							td #{pet.properties.type_of_pet}
+							td #{pet.properties.birthday}
+							td 
+								a.update(href=`/update-cobj?id=${pet.id}`) 
+									i.icon-update 
+									|Update #{pet.properties.name}
+			a.add(href="/add-cobj") 
+				i.icon-add 
+				|Add new pet
