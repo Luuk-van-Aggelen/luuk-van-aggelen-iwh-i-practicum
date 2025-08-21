@@ -1,0 +1,26 @@
+{
+  "name": "package",
+  "version": "1.0.0",
+  "description": "This is the official repository for the Integrating With HubSpot I: Foundations Certification Course. For more information, please go to [HubSpot Academy](https://academy.hubspot.com).",
+  "homepage": "https://github.com/Luuk-van-Aggelen/luuk-van-aggelen-iwh-i-practicum#readme",
+  "bugs": {
+    "url": "https://github.com/Luuk-van-Aggelen/luuk-van-aggelen-iwh-i-practicum/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Luuk-van-Aggelen/luuk-van-aggelen-iwh-i-practicum.git"
+  },
+  "license": "ISC",
+  "author": "Luuk van Aggelen",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "axios": "^1.11.0",
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0",
+    "pug": "^3.0.3"
+  }
+}
