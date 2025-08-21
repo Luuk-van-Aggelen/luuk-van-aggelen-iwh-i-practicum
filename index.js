@@ -5,10 +5,6 @@ const app = express();
 
 const PRIVATE_APP_ACCESS = process.env.PRIVATE_APP_ACCESS;
 
-<<<<<<< Updated upstream
-app.get('/', async (req, res) => {
-	const pets = 'https://app.hubspot.com/contacts/146761057/objects/2-146203150/views/all/list';
-=======
 app.set('view engine', 'pug');
 
 app.use(express.static(__dirname + '/public'));
@@ -18,20 +14,15 @@ app.use(express.json());
 
 app.get('/', async (req, res) => {
 	const pets = 'https://api.hubspot.com/crm/v3/objects/2-146203150?properties=birthday,name,type_of_pet';
->>>>>>> Stashed changes
 	const headers = {
 		Authorization: `Bearer ${PRIVATE_APP_ACCESS}`,
 		'Content-Type': 'application/json'
 	}
 	try {
 		const response = await axios.get(pets, { headers });
-<<<<<<< Updated upstream
-		res.json(response.data.results);
-=======
 		const data = response.data.results;
 		// res.json(data) // raw data;
 		res.render('homepage', { title: 'Pets | HubSpot APIs', data }); 
->>>>>>> Stashed changes
 	} catch (error) {
 		console.error(error);
 	}
