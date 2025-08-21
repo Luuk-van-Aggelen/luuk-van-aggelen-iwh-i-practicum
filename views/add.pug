@@ -1,0 +1,21 @@
+doctype html
+html(lang="en")
+	head
+		title Add Custom Object Form | Integrating With HubSpot I Practicum.
+		link(rel="stylesheet", href="/css/style.css")
+	body
+		.container
+			a.back(href="/")
+				i.icon-back
+				|Return to the homepage
+			h1 Add new pet
+			.form-wrapper
+				form(method="POST")
+					label(for="name") Name
+					input(type="text" name="name" required)
+					label(for="type_of_pet") Type of pet
+					input(type="text" name="type_of_pet" required)
+					label(for="birthday") Date of birth
+					input(type="text" name="birthday" required)
+					input(type="submit" value="Add pet")
+			
